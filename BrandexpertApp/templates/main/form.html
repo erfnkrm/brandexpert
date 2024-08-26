@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}"> 
+</head>
+<body>
+    <header id="header">
+        <div class="header">
+            <div class="brand">
+                <a href="{% url "index" %}"><h1><span>HO</span>ME</h1></a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="contact_page">
+            {% comment %} <h1 class="section-title">Brand expert </h1> {% endcomment %}
+            <h1 class="section-title">brand <span>expert</span></h1>  
+    </section>
+    <section id="contact">
+        <div class="form">
+          <div class="contact-form">
+            <h2>Get a Quote on Industrial Supplies</h2>  
+            <p>We offer a wide range of high-quality industrial supplies, including metals, petroleum products, cement, and more. Get a free quote today and find the perfect products for your needs! We'll be sure to connect with you within 24 hours.</p>  
+            <form action="{% url 'form' %}" method="POST">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+        
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+        
+              <label for="phone">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" required pattern="\+?[0-9]{10,15}" placeholder="+12345678900" title="Please enter the phone number in the format +901232390877">
+              {% csrf_token %}
+              <input type="submit" value="Get a Quote Now">  
+            </form>
+            <p>Your privacy is important to us. We'll only use your information to contact you about your request.</p>  
+            <p><b>Need to explore more?</b> Visit our website for a complete product catalog and detailed information: <a href="{% url 'index' %}">Brand Expert</a></p>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>B</span>rand<span> E</span>xpert</h1>
+      </div>
+      <h2>New solutions for explotions</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="#"><img src="{% static "images/mail.png" %}" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://wa.me/+905419118834"><img src="{% static "images/whatsapp.jpg" %}" /></a>
+        </div>
+      </div>
+      <p>Copyright © 2024 Brand Expert Te. All rights reserved</p>
+    </div>
+  </section>
+
+</body>
+</html>
