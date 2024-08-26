@@ -19,7 +19,7 @@ sudo cp "/home/$PROJECT_MAIN_DIR_NAME/nginx/nginx.conf" "/etc/nginx/sites-availa
 sudo ln -s "/etc/nginx/sites-available/$FOLDER_NAME_WHERE_SETTINGS_FILE_EXISTS" "/etc/nginx/sites-enabled/"
 
 # Add www-data user to ubuntu group
-sudo gpasswd -a www-data ubuntu
+sudo gpasswd -a www-data root
 
 # Restart Nginx service
 sudo systemctl restart nginx

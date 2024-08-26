@@ -10,7 +10,7 @@ if [ -z "$PROJECT_MAIN_DIR_NAME" ]; then
 fi
 
 # Change ownership to ubuntu user
-sudo chown -R ubuntu:ubuntu "/home/$PROJECT_MAIN_DIR_NAME"
+sudo chown -R root:root "/home/$PROJECT_MAIN_DIR_NAME"
 
 # Create virtual environment
 echo "Creating virtual environment..."
