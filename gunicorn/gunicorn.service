@@ -6,8 +6,8 @@ After=network.target
 [Service]
 User=ubuntu
 Group=www-data
-WorkingDirectory=/home/ubuntu/brandexpert
-ExecStart=/home/ubuntu/brandexpert/venv/bin/gunicorn \
+WorkingDirectory=/home/brandexpert
+ExecStart=/home/brandexpert/venv/bin/gunicorn \
           --access-logfile - \
           --workers 3 \
           --bind unix:/run/gunicorn.sock \
